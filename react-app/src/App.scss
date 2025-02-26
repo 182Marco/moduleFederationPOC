@@ -1,0 +1,15 @@
+@use '_vars';
+
+.nd-widget {
+  font-size: vars.$font-size;
+  border-radius: vars.$border-radius;
+  padding: 1em;
+  cursor: pointer;
+
+  backdrop-filter: contrast(90%);
+  transition: backdrop-filter 0.1s linear;
+
+  &:hover {
+    backdrop-filter: contrast(80%);
+  }
+}
