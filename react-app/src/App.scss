@@ -12,4 +12,10 @@
   &:hover {
     backdrop-filter: contrast(80%);
   }
+
+  small {
+    font-size: 0.7em;
+    font-weight: 600;
+    filter: contrast(50%);
+  }
 }

@@ -1,15 +1,16 @@
 import './App.scss'
 
-type AppProps = {
-  config: {
-    text: string
-  }
+export class AppConfig {
+  public constructor(public text: string, public showSmall = true) {}
 }
 
-function App({ config }: AppProps) {
+function App({ config }: { config: AppConfig }) {
   return (
     <>
-      <div className="nd-widget">{config.text}</div>
+      <div className="nd-widget">
+        <p>{config.text}</p>
+        {config.showSmall && <small>Developed by ND</small>}
+      </div>
     </>
   )
 }

@@ -1,8 +1,6 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
-console.log(process.env.NODE_ENV)
-
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -15,5 +13,8 @@ export default defineConfig({
     },
     copyPublicDir: false,
     emptyOutDir: true
+  },
+  define: {
+    'process.env.NODE_ENV': `"${process.env.NODE_ENV}"`
   }
 })

@@ -2,9 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="/outside.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Vite + React + TS</title>
   </head>
   <body class="dark">
@@ -12,8 +14,20 @@
       <h3>React Widget Playground Start</h3>
 
       <div class="widgets">
-        <div data-widget data-widget-config-src="/widget-config.json"></div>
-        <div data-widget data-widget-config-src="/widget-config.json"></div>
+        <div data-widget>
+          <script type="text/json" src="widget-config.json"></script>
+        </div>
+        <div data-widget>
+          <script type="text/json">
+            {
+              "text": "Hello Widget 2"
+            }
+          </script>
+        </div>
+        <div data-widget>
+          <script type="text/json"></script>
+        </div>
+        <div data-widget></div>
       </div>
 
       <h3>React Widget Playground End</h3>

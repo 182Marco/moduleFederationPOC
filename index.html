@@ -13,8 +13,20 @@
       <h3>This is a random website</h3>
 
       <div class="widgets">
-        <div data-widget data-widget-config-src="./widget-config.json"></div>
-        <div data-widget data-widget-config-src="widget-config.json"></div>
+        <div data-widget>
+          <script type="text/json" src="widget-config.json"></script>
+        </div>
+        <div data-widget>
+          <script type="text/json">
+            {
+              "text": "Hello Widget 2"
+            }
+          </script>
+        </div>
+        <div data-widget>
+          <script type="text/json"></script>
+        </div>
+        <div data-widget></div>
       </div>
 
       <h3>Here ends the random website</h3>
