@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.scss'
 import App, { AppConfig } from './App.tsx'
+import './css/index.scss'
 
 document
   .querySelectorAll<HTMLDivElement>('div[data-widget]')
@@ -12,15 +12,15 @@ document
 
     if (!configScript) return
 
-    let config: AppConfig
-
+    let json
     if (configScript.src) {
       const res = await fetch(configScript.src)
-      const json = await res.json()
-      config = new AppConfig(json.text, json.showSmall)
-    } else if (configScript.innerText)
-      config = JSON.parse(configScript.innerText)
-    else return
+      json = await res.json()
+    } else if (configScript.innerText) {
+      json = JSON.parse(configScript.innerText)
+    } else return
+
+    const config = new AppConfig(json.text, json.showSmall)
 
     createRoot(div).render(
       <StrictMode>

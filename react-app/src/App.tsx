@@ -1,18 +1,14 @@
-import './App.scss'
+import Subtitle from './Subtitle'
 
 export class AppConfig {
   public constructor(public text: string, public showSmall = true) {}
 }
 
-function App({ config }: { config: AppConfig }) {
+export default function App({ config }: { config: AppConfig }) {
   return (
-    <>
-      <div className="nd-widget">
-        <p>{config.text}</p>
-        {config.showSmall && <small>Developed by ND</small>}
-      </div>
-    </>
+    <div className="nd-widget">
+      <p>{config.text}</p>
+      {config.showSmall && <Subtitle text="Developed by ND" />}
+    </div>
   )
 }
-
-export default App
