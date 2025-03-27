@@ -1,38 +1,15 @@
+<!-- public/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="style.css" />
-
-    <title>Random Website</title>
+    <title>Widget Playground</title>
   </head>
-  <body class="dark">
-    <div>
-      <h3>This is a random website</h3>
-
-      <div class="widgets">
-        <div data-widget>
-          <script type="text/json" src="widget-config.json"></script>
-        </div>
-        <div data-widget>
-          <script type="text/json">
-            {
-              "text": "Hello Widget 2"
-            }
-          </script>
-        </div>
-        <div data-widget>
-          <script type="text/json"></script>
-        </div>
-        <div data-widget></div>
-      </div>
-
-      <h3>Here ends the random website</h3>
-    </div>
-
-    <script src="react-widget.js"></script>
-    <script src="main.js"></script>
+  <body>
+    <h1>This is the original html body start</h1>
+    <div id="root"></div>
+    <h1>Body end of the original html</h1>
+    <script src="bundle.js"></script>
+    <!-- Carica il bundle generato da Webpack -->
   </body>
 </html>
